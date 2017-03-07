@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>HOME PAGE</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
+</head>
+<body>
+<form method=post action="/login">
+<table border=0 align=center>
+<tr>
+ <td>ID : </td>
+ <td><input type=text name=id maxlength=20></td>
+</tr>
+<tr>
+ <td>PW : </td>
+ <td><input type=password name=pw maxlength=20></td>
+ <td><input type=submit value='Login' style=width:50pt;height:20pt;border:0;color:blue></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
