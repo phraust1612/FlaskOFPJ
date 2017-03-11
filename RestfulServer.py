@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from CPortal import *
-from multiprocessing import Process, Value, Queue
 import time
 import threading
 import atexit
